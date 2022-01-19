@@ -2,6 +2,7 @@
 
 ## Introduction
 
+![Notification Screenshot](.github/noti_screenshot.jpg?raw=true)
 This is a script for **Windows** written in Python 3.10 that gets the battery level of a Razer Mamba Wireless and shows a tray notification.<br>
 Combining with the Task Scheduler, the notification can be regularly shown with self-defined interval (the default is a notification every 15 minutes).
 
