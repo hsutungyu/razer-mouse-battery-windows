@@ -45,7 +45,7 @@ Combining with the Task Scheduler, the notification can be regularly shown with 
 This script is written by looking into [OpenRazer](https://github.com/openrazer/openrazer), a GNU/Linux driver for controlling razer devices.<br>
 Also, I have referenced the [blog post](https://rsmith.home.xs4all.nl/hardware/setting-the-razer-ornata-chroma-color-from-userspace.html) and the [script](https://github.com/rsmith-nl/scripts/blob/main/set-ornata-chroma-rgb.py) by Roland Smith in the process of writing this script.
 
-## How to adpat the Python script for your Razer device
+## How to adapt the Python script for your Razer device
 
 **Warning: This process may brick your device (although my mouse did not). TRY AT YOUR OWN RISK!**<br>
 To adapt the script for your Razer mouse, follow the steps below: 
@@ -55,7 +55,7 @@ To adapt the script for your Razer mouse, follow the steps below:
   * In wired state, the entries contain `VID_1532&PID_0073`, then 0x0073 is the PID of my mouse in the wired state
 2. `git clone https://github.com/openrazer/openrazer.git`
 3. Look at `openrazer/driver/razermouse_driver.c` in the cloned repository
-4. Search for `battery` in the `.c` file to find the function `razer_attr_read_get_battery`
+4. Search for `battery` in the `.c` file to find the function `razer_attr_read_charge_level`
 5. If the name of your mouse appears inside the switch statement, write down the `transaction_id.id`
   * e.g., I see `USB_DEVICE_ID_RAZER_MAMBA_WIRELESS_RECEIVER` inside the switch statement, so the `transaction_id.id` for my mouse is `0x3f`
   * If you do not see your mouse name inside, then the `transaction_id.id` is `0xff`
